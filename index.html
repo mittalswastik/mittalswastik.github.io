@@ -96,7 +96,7 @@
         <nav>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/mittalswastik" target="_blank" rel="noopener">GitHub</a>
         </nav>
     </header>
 
@@ -105,22 +105,24 @@
         <section id="about">
             <h2>About Me</h2>
             <p>
-                I am a fifth‑year PhD student at North Carolina State University working
-                on real‑time GPU scheduling, OpenMP offloading, and compiler
-                optimizations. My research spans heterogeneous computing, security
-                analysis, and quantum‑classical workload integration.
+                I am a fifth‑year PhD student in Computer Science at North Carolina State University, advised by <em>Dr. Frank Mueller</em>.
+                My work focuses on predictable GPU computing, OpenMP offloading, and compiler‑assisted security for
+                cyber‑physical systems.
             </p>
+
             <h3>Education</h3>
             <ul>
-                <li>PhD Computer Science, North Carolina State University, 2025 (expected)</li>
-                <li>M.S. Computer Science, North Carolina State University, 2022</li>
-                <li>B.Tech Computer Engineering, XYZ University, 2019</li>
+                <li><strong>PhD&nbsp;Computer Science</strong>, North Carolina State University (Aug 2020 – Present), GPA 3.63/4.00</li>
+                <li><strong>MS Computer Science</strong>, North Carolina State University (Aug 2018 – Apr 2020), GPA 3.63/4.00</li>
+                <li><strong>B.Tech Computer Science</strong>, Vellore Institute of Technology (Jul 2014 – Apr 2018), GPA 8.76/10</li>
             </ul>
+
             <h3>Skill Set</h3>
             <ul>
-                <li>C/C++, CUDA, OpenMP, LLVM/Clang</li>
-                <li>Python, Qiskit, MPI, POSIX</li>
-                <li>Real‑Time Scheduling, Compiler Pass Development</li>
+                <li><strong>Languages:</strong> C, C++, Python, Go</li>
+                <li><strong>Parallel APIs:</strong> CUDA, OpenMP, MPI</li>
+                <li><strong>Compilers & Tools:</strong> LLVM/Clang, DynamoRIO, Nsight Compute</li>
+                <li><strong>Systems:</strong> Linux kernel modules, GPU scheduling, SDN, Spark/Hadoop</li>
             </ul>
         </section>
 
@@ -134,10 +136,13 @@
         <!-- Research Experience -->
         <section id="research" class="tab-content active" role="tabpanel">
             <h2>Research Experience</h2>
+            <p><em>Graduate Research Assistant, NC State University &nbsp;|&nbsp; Aug 2019 – Present</em></p>
             <ul>
-                <li><strong>GPU Real‑Time Scheduling:</strong> Designed a priority‑aware CUDA stream scheduler integrated with OpenMP 5.0 offloading runtime.</li>
-                <li><strong>T‑Tex:</strong> Developed timing‑based intrusion detection for multi‑threaded real‑time systems; published at ICCPS’25.</li>
-                <li><strong>Quantum‑OpenMP Integration:</strong> Added custom clauses to LLVM OpenMP for quantum circuit offloading; generated Qiskit scripts dynamically.</li>
+                <li><strong>T‑Tex:</strong> Timing‑based intrusion detection for OpenMP real‑time applications (ICCPS 2025). Achieved 100% detection of 60 µs delay attacks by integrating runtime, compiler, and kernel instrumentation.</li>
+                <li><strong>T‑Pack:</strong> Timed network security for embedded systems (ISORC 2021). Added packet‑time analysis in Linux kernel to detect 95‑100% malicious transmissions with &lt;0.013 ms overhead.</li>
+                <li><strong>Priority‑Aware GPU Scheduling:</strong> Designed CUDA stream scheduler inside OpenMP 5.0 runtime to provide federated SM partitioning with NVIDIA Green Contexts.</li>
+                <li><strong>In‑Network Processing Analysis:</strong> Built synthetic Spark/Hadoop benchmarks to identify congestion points in 5G edge clouds; informed SDN switch pipeline designs.</li>
+                <li><strong>Teaching:</strong> GTA for Graduate Parallel Systems course—mentored students on CUDA, MPI clusters, and energy‑performance tuning.</li>
             </ul>
         </section>
 
@@ -145,8 +150,9 @@
         <section id="industry" class="tab-content" role="tabpanel">
             <h2>Industry Experience</h2>
             <ul>
-                <li><strong>Uber, San Francisco — Software Engineering Intern (Summer 2024)</strong><br />Implemented LLVM‑based function layout optimization to reduce I‑Cache misses in Go backend services.</li>
-                <li><strong>AIM Startup — Real‑Time Systems Engineer (2021‑2022)</strong><br />Prototyped kernel‑level scheduler for hard real‑time workloads on embedded GPUs.</li>
+                <li><strong>AIM Intelligent Machines</strong> — Performance Optimization Engineer (May 2024 – Aug 2024)<br />Integrated CUDA MPS framework, lowering GPU latency ~9% and removing ≥80% of CPU/GPU bottlenecks via <code>perf</code> & Nsight analysis.</li>
+                <li><strong>Uber – Programming Systems</strong> — Compiler Optimization Engineer (May 2022 – Aug 2022)<br />Implemented profile‑guided function layout in Go linker using C3 algorithm, improving I‑cache locality on large‑scale micro‑services.</li>
+                <li><strong>DRDO (Defence R&D Org.)</strong> — Cloud Service Engineer (Dec 2017 – Jul 2018)<br />Deployed cost‑efficient KVM + CloudStack private cloud for classified analytics workloads.</li>
             </ul>
         </section>
 
@@ -154,15 +160,17 @@
         <section id="projects" class="tab-content" role="tabpanel">
             <h2>Selected Projects</h2>
             <ul>
-                <li><strong>Green Context Manager:</strong> LD_PRELOAD library intercepting <code>cuLaunchKernel</code> to provision SM slices for federated GPU scheduling.</li>
-                <li><strong>OpenMP Quantum Wrapper:</strong> C++/Python bridge auto‑generating Qiskit circuits for hybrid kernels.</li>
-                <li><strong>IoT Border Detection Boat:</strong> Arduino‑controlled vessel employing ultrasonic sensors and LTE connectivity for perimeter security.</li>
+                <li><strong>Cloud Provider with DNS‑as‑a‑Service:</strong> Automated LXD‑based VPC creation with Bind9 hierarchical DNS.
+                </li>
+                <li><strong>Autonomous Driving Simulator (CARLA):</strong> Combined PID controllers with CNN perception; 100% sign compliance for 10 concurrent vehicles.</li>
+                <li><strong>P2P File Sharing:</strong> Designed dynamic TCP/UDP transfer system with stop‑and‑wait reliability; achieved 95% network throughput.</li>
+                <li><strong>Boat Localization & Border Detection:</strong> Arduino + ultrasonic sensors on IoT boat; real‑time LTE reporting with 100% early defaulter detection on India‑Sri Lanka strait.</li>
             </ul>
         </section>
     </main>
 
     <footer>
-        &copy; 2025 Swastik Mittal · Built with ♥ using GitHub Pages
+        &copy; 2025 Swastik Mittal · Built with ♥ on GitHub Pages
     </footer>
 
     <script>
