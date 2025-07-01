@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-Tex | Timed Security in Real-Time Systems</title>
+    <style>
+        :root { --primary:#2d6cdf; --light:#f7f9fc; --dark:#1a1a1a; }
+        *{ box-sizing:border-box; margin:0; padding:0; font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+        body{ background:var(--light); color:var(--dark); line-height:1.6; }
+        header{ background:var(--primary); color:#fff; padding:1.5rem 2rem; text-align:center; }
+        main{ max-width:850px; margin:2rem auto; padding:0 1rem; }
+        h1{ margin-bottom:.4rem; }
+        h2{ color:var(--primary); margin:1.4rem 0 .8rem; }
+        p { margin-bottom:1rem; }
+        a.btn{
+            display:inline-block; margin:.3rem .5rem .3rem 0; padding:.55rem 1.1rem;
+            background:var(--primary); color:#fff; text-decoration:none; border-radius:6px;
+            font-weight:500; transition:opacity .2s;
+        }
+        a.btn:hover{ opacity:.85; }
+        footer{ text-align:center; padding:1.5rem 0 2.4rem; color:#555; font-size:.9rem; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>T-Pack</h1>
+    <p>Timed Network Security in Distributed Real-Time System</p>
+</header>
+
+<main>
+    <section>
+        <h2>Abstract</h2>
+        <p><strong>T-Pack</strong> Network communication between real-time control
+systems raises system vulnerability to malware attacks over the
+network. Such attacks not only result in alteration of system
+behavior but also incur timing dilation due to executing injected
+code or, in case of network attacks, to dropped, added, rerouted,
+or modified packets.
+This work proposes to detect intrusion based on time dilation
+induced by time delays within the network potentially resulting in
+system malfunctioning due to missed deadlines. A new method
+of timed packet protection, T-Pack, analyzes end-to-end trans-
+mission times of packets and detects a compromised system or
+network based on deviation of observed time from the expected
+time on end nodes, well in advance of a task’s deadline. First,
+the Linux network stack is extended with timing information
+maintained within the kernel and further embedded within
+packets for TCP and UDP communication. Second, real-time
+application scenarios are analyzed in terms of their susceptibility
+to malware attacks. Results are evaluated on a distributed system
+of embedded platforms running a Preempt RT Linux kernel to
+demonstrate its real-time capabilities.</p>
+    </section>
+
+    <section>
+        <h2>Resources</h2>
+        <!-- Replace placeholders with real filenames -->
+        <a class="btn" href="assets/t-pack_paper.pdf"  target="_blank">📄 Paper&nbsp;(PDF)</a>
+        <a class="btn" href="assets/t-pack_slides.pdf" target="_blank">🎞️ Slides</a>
+        <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/9470311" target="_blank">ISORC</a>
+    </section>
+
+    <section>
+        <h2>Citation</h2>
+        <p>S. Mittal and F. Mueller, "T-Pack: Timed Network Security for Real Time Systems," 2021 IEEE 24th International Symposium on Real-Time Distributed Computing (ISORC), Daegu, Korea (South), 2021, pp. 20-28, doi: 10.1109/ISORC52013.2021.00014. <em>Proc. ICCPS&nbsp;2025</em>.</p>
+    </section>
+
+    <p><a href="index.html" class="btn">← Back to Home</a></p>
+</main>
+
+<footer>&copy; 2025 Swastik Mittal</footer>
+</body>
+</html>
