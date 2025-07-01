@@ -17,6 +17,26 @@
         h2{ color:var(--primary); margin-bottom:1rem; }
         ul{ margin-left:1.2rem; }
         /* tabs */
+        /* —— techy background for the page header —— */
+        header{
+            position:relative;
+            /* deep blue-to-indigo gradient */
+            background:linear-gradient(135deg,#1e3a8a 0%, #0f172a 75%);
+            color:#fff;
+            overflow:hidden;          /* clip pattern that overflows */
+        }
+
+        /* semi-transparent circuit pattern */
+        header::after{
+            content:"";
+            position:absolute; inset:0;
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M20 0v20h-6v32h6v20h-6v48h6v20h-6M40 0v20h-6v32h6v20h-6v48h6v20h-6M0 20h20M20 52h20M40 84h20M60 20v20h-6v32h6v20h-6v48h6v20h-6M80 0v20h-6v32h6v20h-6v48h6v20h-6M60 52h20M80 84h20M100 20v20h-6v32h6v20h-6v48h6v20h-6M100 100h20M0 84h20M20 116h20M60 116h20M100 116h20' fill='none' stroke='%23ffffff22' stroke-width='1'%3E%3C/path%3E%3C/svg%3E");
+            background-size:180px 180px;          /* pattern scale */
+            opacity:.6;
+            pointer-events:none;                  /* clicks pass through */
+            mix-blend-mode:soft-light;            /* subtle overlay */
+        }
+
         .tabs{ display:flex; border-bottom:2px solid var(--primary); margin-bottom:1.5rem; }
         .tab{ padding:.8rem 1.2rem; cursor:pointer; font-weight:600; color:var(--primary); border-bottom:4px solid transparent; transition:border-bottom .2s; }
         .tab.active{ border-bottom:4px solid var(--primary); }
@@ -118,8 +138,8 @@
     <section id="industry" class="tab-content" role="tabpanel">
         <h2>Industry Experience</h2>
         <ul>
-            <li><strong>AIM Intelligent Machines</strong> — Performance Optimization Engineer (May 2024 – Aug 2024)<br />Integrated CUDA MPS framework, lowering GPU latency ≈ 9 % and removing ≥ 80 % of CPU/GPU bottlenecks via <code>perf</code> & Nsight analysis.</li>
-            <li><strong>Uber – Programming Systems</strong> — Compiler Optimization Engineer (May 2022 – Aug 2022)<br />Implemented profile-guided function layout in Go linker using C3 algorithm, improving I-cache locality on large-scale micro-services.</li>
+            <li><strong><a href="https://aim.vision/">AIM Intelligent Machines</a></strong> — Performance Optimization Engineer (May 2024 – Aug 2024)<br />Integrated CUDA MPS framework, lowering GPU latency ≈ 9 % and removing ≥ 80 % of CPU/GPU bottlenecks via <code>perf</code> & Nsight analysis.</li>
+            <li><strong><a href="">Uber – Programming Systems</a></strong> — Compiler Optimization Engineer (May 2022 – Aug 2022)<br />Implemented profile-guided function layout in Go linker using C3 algorithm, improving I-cache locality on large-scale micro-services.</li>
             <li><strong>DRDO (Defence R&D Org.)</strong> — Cloud Service Engineer (Dec 2017 – Jul 2018)<br />Deployed cost-efficient KVM + CloudStack private cloud for classified analytics workloads.</li>
         </ul>
     </section>
