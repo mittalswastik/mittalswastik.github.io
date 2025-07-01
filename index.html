@@ -23,6 +23,28 @@
         .tab-content{ display:none; }
         .tab-content.active{ display:block; }
         footer{ text-align:center; padding:1.5rem 0; background:#e9edf5; color:#555; font-size:.9rem; }
+
+        /* —— simple modal —— */
+        .modal-overlay{
+            position:fixed; inset:0;
+            display:none;               /* hidden by default */
+            align-items:center; justify-content:center;
+            background:rgba(0,0,0,.45);
+            z-index:1000;
+        }
+        .modal{
+            background:#fff; color:#1a1a1a;
+            padding:2rem 2.2rem; border-radius:8px;
+            max-width:420px; width:90%;
+            box-shadow:0 2px 12px rgba(0,0,0,.3);
+        }
+        .btn{
+            margin-top:1.2rem; padding:.55rem 1.1rem;
+            background:var(--primary); color:#fff; border:none; border-radius:6px;
+            cursor:pointer; font-weight:500;
+        }
+        .btn:hover{opacity:.85;}
+
     </style>
 </head>
 <body>
@@ -31,7 +53,7 @@
     <p>PhD Candidate • Real-Time Systems • GPU & Compiler Researcher</p>
     <nav>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a id="contact-link" href="#">Contact</a>
         <a href="assets/resume.pdf">Resume</a>
         <a href="https://www.linkedin.com/in/swastik-mittal-72333698/" target="_blank">LinkedIn</aa>
         <a href="https://github.com/mittalswastik" target="_blank" rel="noopener">GitHub</a>
@@ -39,6 +61,17 @@
 </header>
 
 <main>
+
+    <!-- Contact pop-up -->
+    <div id="contactModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="contactTitle">
+        <h2 id="contactTitle">Get in touch</h2>
+        <p>Email: <a href="mailto:smittal6@ncsu.edu">smittal@ncsu.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/swastik-mittal-72333698/" target="_blank">swastik-mittal</a></p>
+        <button id="closeModal" class="btn">Close</button>
+    </div>
+    </div>
+
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>

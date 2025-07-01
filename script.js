@@ -16,3 +16,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// —— contact modal —— //
+document.addEventListener('DOMContentLoaded', () => {
+    const contactLink = document.getElementById('contact-link');
+    const overlay     = document.getElementById('contactModal');
+    const closeBtn    = document.getElementById('closeModal');
+
+    // open
+    contactLink.addEventListener('click', e => {
+        e.preventDefault();
+        overlay.style.display = 'flex';
+        overlay.setAttribute('aria-hidden', 'false');
+    });
+
+    // close button
+    closeBtn.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        overlay.setAttribute('aria-hidden', 'true');
+    });
+
+    // click outside dialog closes too
+    overlay.addEventListener('click', e => {
+        if (e.target === overlay) closeBtn.click();
+    });
+
+    // (esc key optional)
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && overlay.getAttribute('aria-hidden') === 'false')
+            closeBtn.click();
+    });
+});
+
