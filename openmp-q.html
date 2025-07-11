@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenMP-Q | Quantum Task Offloading in OpenMP</title>
+    <style>
+        :root { --primary:#2d6cdf; --light:#f7f9fc; --dark:#1a1a1a; }
+        *{ box-sizing:border-box; margin:0; padding:0; font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+        body{ background:var(--light); color:var(--dark); line-height:1.6; }
+        header{ background:var(--primary); color:#fff; padding:1.5rem 2rem; text-align:center; }
+        main{ max-width:850px; margin:2rem auto; padding:0 1rem; }
+        h1{ margin-bottom:.4rem; }
+        h2{ color:var(--primary); margin:1.4rem 0 .8rem; }
+        p { margin-bottom:1rem; }
+        a.btn{
+            display:inline-block; margin:.3rem .5rem .3rem 0; padding:.55rem 1.1rem;
+            background:var(--primary); color:#fff; text-decoration:none; border-radius:6px;
+            font-weight:500; transition:opacity .2s;
+        }
+        a.btn:hover{ opacity:.85; }
+        footer{ text-align:center; padding:1.5rem 0 2.4rem; color:#555; font-size:.9rem; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>OpenMP-Q</h1>
+    <p>Quantum Task Offloading Extension for OpenMP</p>
+</header>
+
+<main>
+    <section>
+        <h2>Abstract</h2>
+        <p><strong>OpenMP-Q:</strong> 
+        Quantum computing devices are being considered for accel-
+erating workloads such as combinatorial optimization, chemistry simu-
+lation, and hybrid machine-learning kernels, yet today’s quantum SDKs
+(e.g., Qiskit, Cirq) are almost exclusively exposed through Python. This
+creates a gap for C/C++ applications, many of which already orches-
+trate heterogeneous CPU/GPU work with OpenMP, because they lack
+a clean path to invoke quantum kernels or iterate on their results.
+We present OpenMP-Q to raise a discussion for inclusion in the OpenMP
+standard. OpenMP-Q is an extension to the OpenMP 5.x target model
+that treats a quantum processor as a first-class device and enables bi-
+directional communication between C++ and Python. OpenMP-Q adds
+(i) a quantum device type, (ii) a mechanism that bridges OpenMP’s of-
+fload API to the Python quantum stack via POSIX pipes, and (iii)
+an extended offloading framework that communicates variables via map
+clauses to a Python script, executes the quantum task, and reinserts
+the results into the same mapped variables. The pipe mechanism also
+supports reverse-offload-style workflows, e.g., variational algorithms
+where C++ supplies initial rotation angles, the quantum backend returns
+qubit statistics, and the host refines those angles for subsequent itera-
+tions, without breaking OpenMP’s asynchronous execution model or re-
+quiring extra device kernels. Moreover, by combining standard OpenMP
+parallel regions with per-thread quantum offload, OpenMP-Q scales na-
+tively across multiple QPUs, dispatching independent circuit evaluations
+in parallel.
+        </p>
+    </section>
+
+    <section>
+        <h2>Resources</h2>
+        <!-- Replace placeholders with real filenames -->
+        <a class="btn" href="assets/OPENMP_Q-IWOMP25.pdf"  target="_blank">📄 Paper&nbsp;(PDF)</a>
+        <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/9470311" target="_blank">Accepted at IWOMP25</a>
+    </section>
+
+    <section>
+        <h2> Extention To Conqure </h2>
+        <a href="https://arxiv.org/abs/2505.02241" class="inline-link"> CONQURE: A Co-Execution Environment for Quantum and Classical Resources</a>
+    </section>
+
+    <section>
+        <h2>Citation</h2>
+        <p>S. Mittal,  A. Mahesh and F. Mueller, "OpenMP-Q ... (Waiting for Official Citation Reference)</p>
+    </section>
+
+    <p><a href="index.html" class="btn">← Back to Home</a></p>
+</main>
+
+<footer>&copy; 2025 Swastik Mittal</footer>
+</body>
+</html>
